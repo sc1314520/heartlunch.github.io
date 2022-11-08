@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/search.css">
+<link rel="icon" href="images/logo.svg">
+<title>媽媽便當-查詢系統</title>
+<script src="js/jquery2.2.3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="https://kit.fontawesome.com/026fbb8b51.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="top">
+  <h1 class="title" id="title">查詢系統</h1>
+  <div class="ct" id="ct"></div>
+</div>
+  <div class="n">
+   查詢訂單：<input type="text" class="nn" id="nn" placeholder="請輸入中文實名">
+   <button type="button" :disabled="sending" @click="submit" class="btn" id="btn" ><i class="fa-solid fa-magnifying-glass"></i></button>
+  </div>
+  <div class="rec" id="rec">
+    <h1>訂單明細</h1>
+    <p>領餐請出示此畫面</p>
+    <div class="rr">姓名：<span class="as"></span></div>
+    <div class="rr">電話：<span class="as"></span></div>
+    <div class="rr">葷食：<span class="as"></span> 份</div>
+    <div class="rr">葷食（加蛋）：<span class="as"></span> 份</div>
+    <div class="rr">素食：<span class="as"></span> 份</div>
+    <div class="rr">素食（加蛋）：<span class="as"></span> 份</div>
+    <div class="rr">備註：<span class="as"></span></div>
+    <div class="rr">金額（不含備註）：<span class="as"></span> 元</div>
+    <div class="rr">取餐：<span class="as"></span></div>
+    <button type="button" :disabled="sending" onclick=submit2() class="btn2" id="btn2" >刪除訂單</button>
+    </div>
+    
+</div>
+<div class="footer">
+  <h2>聯絡方式：<a target="_blank" href="https://line.me/ti/g2/adNI8Y9PLKVmfAUGezgOMmGLsU8-rwsSq7uJgQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"> Touch to contact us</a></h2>
+  <h2>訂餐時間：當日13:00 ~ 隔日10:00</h2>
+  <a class="hr" href="index.html">訂單系統</a>
+</div>
+</div>
+<script src="js/search.js"></script>
+</body>
+</html>
