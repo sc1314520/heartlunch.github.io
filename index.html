@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" HREF="ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" HREF="ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" HREF="ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" HREF="ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" HREF="ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" HREF="ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" HREF="ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" HREF="ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" HREF="ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  HREF="ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" HREF="ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" HREF="ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" HREF="ico/favicon-16x16.png">
+<link rel="manifest" HREF="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="icon" href="images/logo.svg">
+<title>媽媽便當-訂餐系統</title>
+<script src="js/jquery2.2.3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4739210406284661"
+     crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="top">
+  <h1 class="title" id="title">訂餐系統</h1>
+  <div class="ct" id="ct"></div>
+</div>
+<div class="container" id="app">
+  <form>
+  <div class="main" id="main">
+    <div class="cal">
+      <h1>總計金額</h1>
+      <div class="total" id="total">0</div>
+    </div>
+    <div class="cont">
+      <div class="c">
+        <h1 class="na">葷食</h1>
+        <img src="images/lu.png" alt="">
+        <div class="sum">
+          <input type="number" min="0" max="5" value="0" class="is" v-model="m1" placeholder="請輸入數量 (0~5)：">
+        </div>
+      </div>
+      <div class="c">
+        <h1 class="na">素食</h1>
+        <img src="images/fruit.jpeg" alt="">
+        <div class="sum">
+          <input type="number" min="0" max="5" value="0" class="is" v-model="m2" placeholder="請輸入數量 (0~5)：">
+        </div>
+      </div>
+      <div class="c">
+        <h1 class="na">葷食(加蛋）</h1>
+        <img src="images/lu.png" alt="">
+        <div class="sum">
+          <input type="number" min="0" max="5" value="0" class="is" v-model="m3" placeholder="請輸入數量 (0~5)：">
+        </div>
+      </div>
+      <div class="c">
+        <h1 class="na">素食（加蛋）</h1>
+        <img src="images/fruit.jpeg" alt="">
+        <div class="sum">
+          <input type="number" min="0" max="5" value="0" class="is" v-model="m4" placeholder="請輸入數量 (0~5)：">
+        </div>
+      </div>
+    </div>
+    <br>
+    <label for="name">姓名：</label>
+    <input type="text" id="name" name="lastname" placeholder="請輸入中文實名" v-model="name" ><br>
+    <label for="num">電話：</label>
+    <input type="tel" id="num" name="lastname" placeholder="請輸入電話號碼" v-model="num"><br>
+    <label for="sel">取餐時間：</label>
+    <input type="time" name="" id="sel" v-model="time" min="11:00" max="13:00"><br>
+    <label for="ta">備註：</label><br>
+    <textarea  class="ta" name="ta" id="ta" cols="26" rows="2" v-model="ta"></textarea><br>
+    <label for="pass">驗證碼：</label><input type="text" id="pass">
+    <button type="button" :disabled="sending" @click="submit" class="btn" id="btn" >送出</button>
+  </form>
+  </div>
+  <div class="rec" id="rec">
+    <h1>訂單明細</h1>
+    <p>領餐請出示此畫面</p>
+    <div class="rr">姓名：<span class="as"></span></div>
+    <div class="rr">電話：<span class="as"></span></div>
+    <div class="rr">葷食：<span class="as"></span> 份</div>
+    <div class="rr">葷食（加蛋）：<span class="as"></span> 份</div>
+    <div class="rr">素食：<span class="as"></span> 份</div>
+    <div class="rr">素食（加蛋）：<span class="as"></span> 份</div>
+    <div class="rr">備註：<span class="as"></span></div>
+    <div class="rr">金額（不含備註）：<span class="as"></span> 元</div>
+    <div class="rr">取餐：<span class="as"></span></div>
+    <div class="thx">
+      <img src="images/thx.png" alt="">
+    </div>
+    
+</div>
+<div class="footer">
+  <h2>聯絡方式：<a target="_blank" href="https://line.me/ti/g2/adNI8Y9PLKVmfAUGezgOMmGLsU8-rwsSq7uJgQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"> Touch to contact us</a></h2>
+  <h2>訂餐時間：當日13:00 ~ 隔日10:00</h2>
+  <div class="count" id="count">造訪次數：<span id="countt"></span></div>
+  <a class="hr" href="search.html">訂單查詢</a>
+</div>
+</div>
+<script src="js/index.js"></script>
+<script src="js/push.js"></script>
+<script src="js/count.js"></script>
+</body>
+</html>
