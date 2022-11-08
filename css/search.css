@@ -1,0 +1,120 @@
+
+.top{
+    width: 375px;
+    margin: 0 auto;
+    background: brown;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    line-height: 2;
+}
+.rec{
+    color: brown;
+    width:375px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    display: none;
+    position: relative;
+  }
+  .rec>h1{
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.7;
+  }
+  .rec>p{
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 5px;
+  }
+  .rr{
+    width:250px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+  }
+.footer{
+    position: relative;
+    padding-top: 2px;
+    width:375px;
+    margin: 0 auto;
+    height: 55px;
+    background: brown;
+    border-radius: 0 0 8px 8px;
+    margin-top: 8px;
+  }
+  .footer>h2{
+    line-height: 25px;
+    font-size: 14px;
+    color: white;
+    margin-left: 10px;
+  }
+  .footer a{
+    color: white;
+    text-decoration: none;
+  }
+  .footer a:hover{
+    color: red;
+  }
+  .btn{
+    border: 1px solid brown;
+    border-radius: 3.5px;
+    background-color:transparent;
+    color: brown;
+    line-height: 2;
+    margin-left: 8px;
+    width: 60px;
+
+  }
+  .btn:hover{
+    cursor: pointer;
+    background: brown;
+    color:white;
+  }
+  .btn2{
+    width: 375px;
+    margin: 0 auto;
+    border: 1px solid brown;
+    border-radius: 3.5px;
+    background-color:transparent;
+    color: brown;
+    line-height: 2;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .btn2:hover{
+    cursor: pointer;
+    background: brown;
+    color:white;
+  }
+  .n{
+    width: 375px;
+    margin: 0 auto;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 2;
+    color: brown;
+  }
+  .nn{
+    line-height: 2;
+    width: 200px;
+    color: brown;
+    border: 1px solid brown;
+    border-radius: 3.5px;
+  }
+
+  .hr{
+    position: absolute;
+    right:20px;
+    bottom:19px;
+  }
+  .hr>a{
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  .hr>a:hover{
+    color: red;
+  }
